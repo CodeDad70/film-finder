@@ -1,0 +1,180 @@
+.App-layout {
+  background-color: #515050;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 30px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.lyrics {
+  width: 800px;
+}
+
+.songform {
+  width: 100px;
+}
+
+.chords {
+  background: transparent;
+  border: none;
+}
+
+.songtab {
+  width:70%;
+  color: rgb(255, 255, 255);
+  float:right;
+  white-space: pre;
+  display:block;
+}
+
+.main-stage {
+  width:70%;
+  color: rgb(255, 255, 255);
+  float:right;
+  display:block;
+}
+
+.lyric-field {
+  width:70%;
+  color: rgb(255, 255, 255); 
+  white-space: pre;
+}
+
+.welcome {
+  text-align: center;
+  width:40%;
+  background-color: #d6002e;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Sidebar {
+  background-color: #d6002e;
+  float: left;
+  width: 25%;
+  float: left;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  clear:left;
+  color: #750808;
+}
+
+
+.Logo { 
+  line-height: 5px;
+  float: left;
+  padding: 10px 0px 15px 10px;
+  background-color: #d6d6d6;
+  width: 25%;
+}
+
+.welcome-logo {
+  display: block;
+  background-color: #eee;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 300px;
+  padding: 15px;
+  background-color: #d6d6d6;
+}
+
+.New-song {
+  background-color: #d6d6d6;
+  color: rgb(0, 0, 0);
+  float: left;
+  width: 25%;
+  float: left;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  clear:left;
+  line-height: 8px;
+}
+
+.link-style {
+  color:  #ffffff; 
+}
+
+.logo-link-style {
+  color:  #000000; 
+}
+
+.song-card {
+  
+  --webkit-box-shadow: 3px 5px 31px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 5px 31px 2px rgba(0,0,0,0.75);
+  box-shadow: 3px 5px 15px 2px rgba(0,0,0,0.75);
+
+width: 90%;
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 2px solid #dbdbdb;
+background:  #a3a2a2;  
+margin: 0 auto 20px
+}
+
+.song-card-title {
+  text-align: center;
+  
+border-radius: 9px 0px 0px 0px;
+-moz-border-radius: 9px 0px 0px 0px;;
+-webkit-border-radius: 9px 0px 0px 0px;
+border: 2px solid #dbdbdb;
+  height: 50px;
+  background: #dbdbdb;
+  color:  rgba(0,0,0,0.75);
+  
+}
+
+.song-card-lyrics { 
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.song-card-edit {
+  float:left;
+  padding-top: 30px;
+  padding-bottom: 75px;
+}
+
+.song-card-delete {
+  float:right;
+  padding-top: 30px;
+  padding-bottom: 75px;
+}
+
+.textarea {
+	width: 600px;
+	height: 600px;
+  border: 3px solid #cccccc;
+  overflow:scroll;
+  resize: none; 
+  outline:none;
+  white-space:pre-line;
+}
+
+.form-layout {
+  width: 800px;
+}
+
+.form-inline > * {
+  margin:5px 10px;
+}
