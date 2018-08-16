@@ -13,8 +13,8 @@ class MovieDisplay extends Component {
 
   render() {
     
-      if(this.props.movies.filmReducer.results) {
-        renderMovies = this.props.movies.filmReducer.results.map(function(search){ 
+      if(this.props.movies) {
+        renderMovies = this.props.movies.map(function(search){ 
             if(search.title) {
           return <MovieCard key={search.id} search={search} />
             } else if (search.name) {
@@ -42,7 +42,7 @@ class MovieDisplay extends Component {
 
   const mapStateToProps = (state) => {
     return ({
-      movies: state
+      movies: state.filmReducer.results
     })
   }
   
