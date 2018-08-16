@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 
 import {getNowPlaying} from '../actions/movies';
 import MovieSearch from '../containers/MovieSearch'
+import NowPlaying from './NowPlaying';
+import AllFavorites from './AllFavorites'
 
 
 
@@ -37,7 +39,8 @@ return (
 <div>
   
   {renderNowPlaying}
-    
+    <NowPlaying/>
+    <AllFavorites/>
    <MovieSearch/>
   
 </div>

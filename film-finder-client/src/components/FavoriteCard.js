@@ -17,7 +17,7 @@ class FavoriteCard extends Component {
       <h3> {this.props.fav.title} </h3>
       <p> {this.props.fav.overview} </p>
       <img className="AlbumImage" src = {"http://image.tmdb.org/t/p/w300//" + this.props.fav.backdrop_path} alt={this.props.fav.name} / >  
-      <Favorite title={this.fav.search.title} overview={this.props.fav.overview}  />
+      <Favorite title={this.props.title} overview={this.props.fav.overview}  />
       </div>
     
       </div>

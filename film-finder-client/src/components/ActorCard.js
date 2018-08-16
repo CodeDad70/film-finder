@@ -2,6 +2,8 @@ import React, {Component} from 'react' ;
 import {connect} from 'react-redux';
 import {getActorMovies} from '../actions/movies'
 import { Redirect } from 'react-router'
+import NowPlaying from './NowPlaying';
+import AllFavorites from './AllFavorites'
 
 class ActorCard extends Component {
   

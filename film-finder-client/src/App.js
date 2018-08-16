@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Welcome from './components/Welcome'
 import MovieDisplay from './components/MovieDisplay'
 import ActorsMoviesDisplay from './components/ActorsMoviesDisplay'
-import NowPlaying from './components/NowPlaying';
 import NowPlayingDisplay from './components/NowPlayingDisplay'
+
+import FavoritesDisplay from './components/FavoritesDisplay'
 import './stylesheets/App.css';
 
 class App extends React.Component {
@@ -14,14 +15,16 @@ class App extends React.Component {
    <Router>
   <div className="card-1">
     <h1> Welcome to the FilmFinder</h1>
-    <NowPlaying/>
     
     
     <Route exact path="/" component={Welcome}/>
+    
     <Route exact path="/nowplaying" component={NowPlayingDisplay}/>
     <Route exact path="/actors/movies" component={ActorsMoviesDisplay} />
     <Route exact path="/movies" component={MovieDisplay} />
     <Route exact path="/actor" component={MovieDisplay} />
+
+    <Route exact path="/watchlist" component={FavoritesDisplay}/>
   
   </div>
   </Router>

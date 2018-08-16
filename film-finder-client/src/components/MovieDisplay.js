@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import MovieCard from './MovieCard'
 import ActorCard from './ActorCard'
 import MovieSearch from '../containers/MovieSearch'
+import NowPlaying from './NowPlaying';
+import AllFavorites from './AllFavorites'
 
 let renderMovies
 
@@ -24,6 +26,9 @@ class MovieDisplay extends Component {
     return (
       <div>
       <h1>Here are your movies: </h1>
+        <NowPlaying/>
+        <AllFavorites/>
+        
         <MovieSearch/>
       
         {renderMovies}

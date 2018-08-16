@@ -11,6 +11,12 @@ const addFavorite = favorite => {
   }
 }
 
+const setFavorites = favorites => {
+  return {
+    type: 'GET_FAVORITES',
+    favorites
+  }
+}
 
 
 
@@ -29,7 +35,20 @@ export const createFavorite = favorite => {
     .then (response => response.json())
     .then(favorite => {
       dispatch(addFavorite(favorite))
+      dispatch(getFavorites())
     })
     .catch(error=>console.log(error))
+  }
+}
+
+export const getFavorites = () => {
+  return dispatch => {
+    return fetch(`${API_URL}/favorites`)
+      .then(response => response.json())
+      .then(favorites => {
+        dispatch(setFavorites(favorites))
+      })
+      
+      .catch(error => console.log(error))
   }
 }
