@@ -5,12 +5,14 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 import filmReducer from './reducers/filmReducer';
+import favoritesReducer from './reducers/favoritesReducer';
 
 
 
 
 const reducers = combineReducers ({
-  filmReducer
+  filmReducer,
+  favoritesReducer
 
 });
 const middleware = [thunk]; 
