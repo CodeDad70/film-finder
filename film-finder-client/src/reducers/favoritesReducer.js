@@ -13,6 +13,9 @@ export default (state = [favoriteTitles=[]], action) => {
     console.log('favoriteTitles', favoriteTitles)
       return action.favoriteTitles   
 
+      case 'DELETE_FAVORITE':
+      return state.filter(favorite => favorite.title !== action.title);  
+
     default:
       return state;
   }

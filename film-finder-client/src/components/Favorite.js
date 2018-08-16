@@ -2,7 +2,7 @@ import React, {Component} from 'react' ;
 import {connect} from 'react-redux';
 import {createFavorite} from '../actions/favorites'
 import {getFavorites} from '../actions/favorites'
-
+import {deleteFavorite} from '../actions/favorites'
 
 
 
@@ -16,33 +16,59 @@ class Favorite extends Component {
   
 
   handleClick = () => {
-    console.log("click", this.addFav)
-    const currentMovieData = {
-      title: this.addFav.title,
-      overview:this.addFav.overview
-    } 
+    console.log("click", this.addFav, this.removeFav)
+    
+
+    if (this.addFav) {
+
+      const currentMovieData = {
+        title: this.addFav.title,
+        id: this.addFav.id,
+        overview:this.addFav.overview
+      }
     
     this.props.createFavorite(currentMovieData)
-    this.props.getFavorites()
-  }
+    
+
+    } else {
+      
+      let removeId
+      this.props.favorites.map(function(fav) {
+        console.log('inside map', this.removeFav.title, fav.title)
+        if (this.removeFav.title === fav.title) {
+          
+          this.props.deleteFavorite(fav.id)
+          
+        }
+      }.bind(this))
+        
+      
+    }
+  
+
+
+}
+
+
+
 
 
   render() {
     
     
-      let removeFav
-      let addFav
+      
+      
       let buttonSelect
       let favTitles = []
       
-     console.log('inside fav render', this.props.favorites) 
+     
     this.props.favorites.map (fav  =>favTitles.push(fav.title))
   
     
     let match = favTitles.filter(fav=> fav === this.props.search.title)
     console.log(match)
     
-    match.length >= 1 ? buttonSelect = <button onClick={this.handleClick} ref={this.removeFav}> Remove from Watchlist </button> : buttonSelect = <button onClick={this.handleClick} value={this.addFav = this.props.search}> Add To  Watchlist </button>
+    match.length >= 1 ? buttonSelect = <button onClick={this.handleClick}  value={this.removeFav= this.props.search}> Remove from Watchlist </button> : buttonSelect = <button onClick={this.handleClick}  value={this.addFav = this.props.search}> Add To  Watchlist </button>
 
     
     //  console.log(buttonSelect)
@@ -60,11 +86,12 @@ class Favorite extends Component {
     return ({
       favorites: state.favoritesReducer,
       createFavorite: state.createFavorite,
-
+      deleteFavorite: state.deleteFavorite
     })
   }
   
   export default connect(mapStateToProps, {
     getFavorites,
-    createFavorite
+    createFavorite,
+    deleteFavorite
   })(Favorite);
