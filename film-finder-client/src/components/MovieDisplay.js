@@ -5,11 +5,16 @@ import ActorCard from './ActorCard'
 import MovieSearch from '../containers/MovieSearch'
 import NowPlaying from './NowPlaying';
 import AllFavorites from './AllFavorites'
+import {getFavorites} from '../actions/favorites'
 
 let renderMovies
 
 class MovieDisplay extends Component {
   
+  componentDidMount = () => {   
+    this.props.getFavorites()
+  }
+
 
   render() {
     
@@ -42,8 +47,12 @@ class MovieDisplay extends Component {
 
   const mapStateToProps = (state) => {
     return ({
-      movies: state.filmReducer.results
+      movies: state.filmReducer.results,
+      getFavorites: state.getFavorites
     })
   }
   
-  export default connect(mapStateToProps)(MovieDisplay);
+  export default connect(mapStateToProps, {
+    getFavorites
+  })(MovieDisplay);
+

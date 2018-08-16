@@ -3,14 +3,6 @@ const API_URL='http://localhost:3001/api'
 
 //action creators
 
-const addFavorite = favorite => {
-  console.log("inside favorite", favorite)
-  return {
-    type: 'CREATE_FAVORITE_SUCCESS',
-    favorite
-  }
-}
-
 const setFavorites = favorites => {
   return {
     type: 'GET_FAVORITES',
@@ -34,8 +26,8 @@ export const createFavorite = favorite => {
     })
     .then (response => response.json())
     .then(favorite => {
-      dispatch(addFavorite(favorite))
       dispatch(getFavorites())
+      
     })
     .catch(error=>console.log(error))
   }

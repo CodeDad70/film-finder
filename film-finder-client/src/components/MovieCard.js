@@ -17,7 +17,7 @@ class MovieCard extends Component {
       <h3> {this.props.search.title} </h3>
       <p> {this.props.search.overview} </p>
       <img className="AlbumImage" src = {"http://image.tmdb.org/t/p/w300//" + this.props.search.backdrop_path} alt={this.props.search.name} / >  
-      <Favorite title={this.props.search.title} overview={this.props.search.overview}  />
+      <Favorite search={this.props.search} />
       </div>
     
       </div>

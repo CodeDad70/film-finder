@@ -1,15 +1,17 @@
+let favoriteTitles = []
 
-
-export default (state = [], action) => {
+export default (state = [favoriteTitles=[]], action) => {
   switch(action.type) {
-    case 'CREATE_FAVORITE_SUCCESS':
-    console.log("inside fav reducer", action.favorite)    
-      return action.favorite;
+    
     
     case 'GET_FAVORITES':
     console.log('inside favs', action.favorites)
-     
       return action.favorites;
+
+    case 'FAV_TITLES':
+    action.favorites.map(fav => state.favoriteTitles.push(fav.title))
+    console.log('favoriteTitles', favoriteTitles)
+      return action.favoriteTitles   
 
     default:
       return state;
