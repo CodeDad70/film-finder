@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  backdrop_path: MyString
+  moviedb_id: 1
+  overview: MyText
+  popularity: 1
+  post_path: MyString
+  release_date: MyString
+
+two:
+  title: MyString
+  backdrop_path: MyString
+  moviedb_id: 1
+  overview: MyText
+  popularity: 1
+  post_path: MyString
+  release_date: MyString
