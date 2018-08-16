@@ -13,7 +13,6 @@ class MovieDisplay extends Component {
     
       if(this.props.movies.filmReducer.results) {
         renderMovies = this.props.movies.filmReducer.results.map(function(search){ 
-            console.log("Inside MovieDisplay", search)
             if(search.title) {
           return <MovieCard key={search.id} search={search} />
             } else if (search.name) {

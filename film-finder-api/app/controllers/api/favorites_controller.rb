@@ -8,14 +8,16 @@ class Api::FavoritesController < ApplicationController
     render json: Favorite.find_by(id: params[:id])
   end
 
-  def create
+  def create 
     favorite = Favorite.new(favorite_params)
-    if favorite.save
-      render json: favorite
+    if favorite.save 
+      render json:favorite
     else
       render json: {message: favorite.errors}, status: 400 
     end
-  end  
+  end
+ 
+   
 
   def update 
     if @favorite.update(favorite_params)
@@ -46,5 +48,5 @@ class Api::FavoritesController < ApplicationController
 
   end
 
-end
+
 
