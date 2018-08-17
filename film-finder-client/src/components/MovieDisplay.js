@@ -30,11 +30,10 @@ class MovieDisplay extends Component {
 
     return (
       <div>
-      <h1>Here are your movies: </h1>
-        <NowPlaying/>
-        <AllFavorites/>
-        
-        <MovieSearch/>
+      
+      <div className="main-search">
+          <MovieSearch/>
+      </div>
       
         {renderMovies}
 

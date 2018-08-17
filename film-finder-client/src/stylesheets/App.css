@@ -72,7 +72,7 @@ a:hover {
   display:block;
   float:right;
   margin-right: 20px;
-  width:17%;
+  width:225px;
 }
 
 .nav-left{
@@ -111,7 +111,8 @@ a:hover {
 .searchcontainer {
   
   margin: 0 auto;
-  width:60%
+  width:300px;
+  padding-bottom:10%
 }
 
 .search-text {
@@ -172,7 +173,7 @@ width: 60%;
   border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
-border: 3px solid rgb(112, 135, 253);
+border: 2px solid rgb(112, 135, 253);
 background:  #e4e4ec;  
 margin: 0 auto 20px;
 
@@ -183,6 +184,13 @@ margin: 0 auto 20px;
   margin-right: 10%;
   height: 100%
 }
+
+.actor-image {
+  margin-right: 5%;
+  height: 100%
+
+}
+
 .movie-card-title {
   
   
@@ -201,6 +209,7 @@ margin: 0 auto 20px;
   flex-direction: column;
   display: flex;
   margin-right: 5px;
+  height:25%;
 }
 
 .flex-body {
@@ -209,6 +218,6 @@ margin: 0 auto 20px;
 
 .flex-body div:not([class*="flex"]) {
   
-  flex: 1 1 200px;
+  flex: 1 1 100px;
   width: 10%;
 }
