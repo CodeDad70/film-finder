@@ -8,17 +8,30 @@ class FavoriteCard extends Component {
   
 
   render() {
-    console.log(this.props.fav)
-    return (
-      <div key={this.props.fav.id} className = "MovieCard">
-  
-    <div className = "movie-card"  >
     
-    <img className="AlbumImage" src = {"http://image.tmdb.org/t/p/w185//" + this.props.fav.poster_path} alt={this.props.fav.name} / >   
-      <h3> {this.props.fav.title} </h3>
-      <p> {this.props.fav.overview} </p>
-      <img className="AlbumImage" src = {"http://image.tmdb.org/t/p/w300//" + this.props.fav.backdrop_path} alt={this.props.fav.name} / >  
+    return (
+     
+    <div key={this.props.fav.id} className = "movie-card" >
+    
+    <div className='flex-body'>
+      
+    <div className="flex-column" >
+      <img className="AlbumImage" src = {"http://image.tmdb.org/t/p/w185//" + this.props.fav.poster_path} alt={this.props.fav.name} / >  
+    </div> 
+
+    <div className="flex-column">
+
+      <div className="flex-row">
+
+      <h2 className="movie-card.title"> {this.props.fav.title} </h2>
+      </div>
+        
+        {this.props.fav.overview}
+        </div>
+      
+        <div className="flex-row"> 
       <FavoriteDelete fav={this.props.fav}/>
+      </div>
       </div>
     
       </div>

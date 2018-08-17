@@ -32,8 +32,11 @@ class ActorsMovieCard extends Component {
 
         <h2>Film: {this.props.search.title} </h2>
         </div>
-        <h3>Character:  {this.props.search.character} </h3>
+        <h3>Character:  {this.props.search.character} 
+        </h3>
+        
         <Favorite search={this.props.search} />
+        
        </div> 
         
         </div>

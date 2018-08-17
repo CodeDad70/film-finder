@@ -31,10 +31,12 @@ class FavoritesDisplay extends Component {
     }
     return (
       <div>
-        <NowPlaying/>
-        <AllFavorites/>
-        <MovieSearch/>
-        <h1>Here is your watchlist: </h1>
+        
+        <div className="main-search">
+          <MovieSearch/>
+      </div>
+
+        <h2 className="main-headline">Your watchlist: </h2>
         {renderFavorites}
 
       </div>
