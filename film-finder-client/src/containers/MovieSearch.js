@@ -59,7 +59,7 @@ render() {
 return (
 <div className="searchcontainer">
   
-  <h3 className="search-text">Search for a movie: </h3>
+  <h3 className="main-search-text">Search for a movie: </h3>
   <form  onSubmit={this.handleSearch}>
   
    <input className="searchbox" required type="text" ref={(input)=>this.getSearch = input} 
