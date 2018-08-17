@@ -12,8 +12,14 @@ class FavoritesDisplay extends Component {
 
   render() {
     let renderFavorites
-    
+    let noFavResult
+
+    if(!this.props.favorites) {
+      noFavResult = <h2 className="main-headline">You have not started a Watchlist yet.  </h2>
+    }
+
     if (this.props.favorites) {
+      noFavResult = <h2 className="main-headline">Your Watchlist: </h2>
       renderFavorites = this.props.favorites.map(function (fav) {
         return <div><FavoriteCard key={fav.id} fav={fav} /></div>
       })
@@ -23,7 +29,7 @@ class FavoritesDisplay extends Component {
         <div className="main-search">
           <MovieSearch />
         </div>
-        <h2 className="main-headline">Your Watchlist: </h2>
+        {noFavResult}
         {renderFavorites}
       </div>
     )

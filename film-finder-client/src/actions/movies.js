@@ -3,7 +3,6 @@ const REACT_APP_API_KEY = '507b27c76d1cd9905d36d167744d3eca'
 //action creators
 
 const setMovie = movies => {
-  console.log("inside setMovie", movies)
   return {
     type: 'GET_MOVIE_SUCCESS',
     movies
@@ -33,12 +32,12 @@ const setActorMovies = actormovies => {
 }
 
 const setNowPlaying = nowplaying => {
-  console.log("inside setNowPlaying")
   return {
     type: 'GET_NOW_PLAYING_SUCCESS',
     nowplaying
   }
 }
+
 
 //  -- Async Actions -- 
 
