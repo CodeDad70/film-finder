@@ -8,46 +8,41 @@ import {deleteFavorite} from '../actions/favorites'
 
 class Favorite extends Component {
   
-  componentDidMounts = () => {
-    this.props.favorites.map(function(fav){
-      getFavorites()
-   })
+  componentDidMounts = () => { 
+      this.props.getFavorites() 
   }
   
 
   handleClick = () => {
-    console.log("click", this.addFav, this.removeFav)
     
 
     if (this.addFav) {
-
+      console.log("addFav", this.addFav.id )
       const currentMovieData = {
         title: this.addFav.title,
-        id: this.addFav.id,
+        moviedb_id: this.addFav.id,
         overview:this.addFav.overview
       }
     
     this.props.createFavorite(currentMovieData)
     
 
-    } else {
+    } else if (this.removeFav) {
       
-      let removeId
-      this.props.favorites.map(function(fav) {
-        console.log('inside map', this.removeFav.title, fav.title)
-        if (this.removeFav.title === fav.title) {
-          
-          this.props.deleteFavorite(fav.id)
+      
+
+          this.props.deleteFavorite(this.removeFav)
+         
+        
           
         }
-      }.bind(this))
-        
+ 
       
     }
   
 
 
-}
+
 
 
 
@@ -58,23 +53,30 @@ class Favorite extends Component {
     
       
       
-      let buttonSelect
-      let favTitles = []
-      
-     
-    this.props.favorites.map (fav  =>favTitles.push(fav.title))
-  
+    let buttonSelect
+    let buttonRender
     
-    let match = favTitles.filter(fav=> fav === this.props.search.title)
-    console.log(match)
+    let movieId = this.props.search.id
+    let deleteId = 0
+   
+    console.log("movieId", movieId, this.props.search.title)
     
-    match.length >= 1 ? buttonSelect = <button onClick={this.handleClick}  value={this.removeFav= this.props.search}> Remove from Watchlist </button> : buttonSelect = <button onClick={this.handleClick}  value={this.addFav = this.props.search}> Add To  Watchlist </button>
-
+    
+    this.props.favorites.map(function(fav){
+        console.log("fav check", fav.moviedb_id)
+      if(fav.moviedb_id === movieId) {
+        deleteId = fav.id
+        
+      } 
+    })
+    
+    deleteId>=1 ?  buttonRender = <button onClick={this.handleClick}  value={this.removeFav= deleteId}> Remove from Watchlist </button> :
+    buttonRender = <button onClick={this.handleClick}  value={this.addFav = this.props.search}> Add To  Watchlist </button>
     
     //  console.log(buttonSelect)
     return (
       <div>
-       {buttonSelect}
+       {buttonRender}
       </div>
     )
     }

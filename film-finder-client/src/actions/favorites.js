@@ -53,7 +53,7 @@ export const getFavorites = () => {
   }
 }
 
-export const deleteFavorite = (id) => {
+export const deleteFavorite = (id, history) => {
   console.log("inside deleteFavorite", id)
   return dispatch => {
     return fetch(`http://localhost:3001/api/favorites/${id}`, {
@@ -63,9 +63,12 @@ export const deleteFavorite = (id) => {
       },
       body: JSON.stringify({ id: id })
     })
-      .then(response => response.json())
+      
       .then(id => {
+        
         dispatch(deleteFavoriteUpdate(id))
+        dispatch(getFavorites())
+        
         
       })
       .catch(error => console.log(error))

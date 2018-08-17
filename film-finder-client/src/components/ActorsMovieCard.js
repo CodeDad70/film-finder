@@ -1,5 +1,6 @@
 import React, {Component} from 'react' ;
 import {connect} from 'react-redux';
+import Favorite from './Favorite';
 
 
 
@@ -24,6 +25,8 @@ class ActorsMovieCard extends Component {
         
         <img className="PosterImage" src = {"http://image.tmdb.org/t/p/w300//" + this.props.search.poster_path} alt='Sorry - Image Not Available'/>  
         <p> id = {this.props.search.id} </p>
+        
+        <Favorite search={this.props.search} />
         </div>
         </div>
     )
