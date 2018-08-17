@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import MovieCard from './MovieCard'
 import ActorCard from './ActorCard'
 import MovieSearch from '../containers/MovieSearch'
-import NowPlaying from './NowPlaying';
-import AllFavorites from './AllFavorites'
 import { getFavorites } from '../actions/favorites'
 
 let renderMovies

@@ -34,7 +34,6 @@ class Favorite extends Component {
     let deleteId = 0
 
     this.props.favorites.map(function (fav) {
-      console.log("fav check", fav.moviedb_id)
       if (fav.moviedb_id === movieId) {
         deleteId = fav.id
       }

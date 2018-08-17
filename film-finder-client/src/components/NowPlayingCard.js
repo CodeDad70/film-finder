@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import MovieSearch from '../containers/MovieSearch'
 import Favorite from './Favorite'
-
-let renderNowPlaying
 
 class NowPlayingCard extends Component {
   render() {

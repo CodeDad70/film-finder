@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Favorite from './Favorite';
 
 class MovieCard extends Component {

@@ -1,6 +1,4 @@
-let favoriteTitles = []
-
-export default (state = [favoriteTitles = []], action) => {
+export default (state = [], action) => {
   switch (action.type) {
 
     case 'DELETE_FAVORITE':

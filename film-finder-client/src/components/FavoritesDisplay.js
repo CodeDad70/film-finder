@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MovieSearch from '../containers/MovieSearch'
 import FavoriteCard from './FavoriteCard';
-import NowPlaying from './NowPlaying';
-import AllFavorites from './AllFavorites'
 import { getFavorites } from '../actions/favorites'
 
 class FavoritesDisplay extends Component {
