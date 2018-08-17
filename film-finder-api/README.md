@@ -17,7 +17,7 @@ This is a React/Redux app with a Rails backend. You will need Reat, Redux and Ru
 
 * In your terminal type rails s -p 3001 to start up the local API server. 
 
-* Now navigate to the top level on the client directory (cd..  then cd film-finder-client)
+* In a second terminal navigate to the top level on the client directory ( cd film-finder/film-finder-client)
 
 * Start the React app by typing yarn start. This should open a browser window, if it doesn't go to http://localhost:3000 to start the app. 
 

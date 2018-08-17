@@ -1,5 +1,4 @@
-const API_URL='http://localhost:3001/api'
-
+const API_URL = 'http://localhost:3001/api'
 
 //action creators
 
@@ -19,25 +18,23 @@ export const deleteFavoriteUpdate = id => {
 }
 
 
-
 //  -- Async Actions -- 
 
 export const createFavorite = favorite => {
   console.log('insideCreateFavorite', favorite)
   return dispatch => {
-    return fetch (`${API_URL}/favorites`, {
-    method: 'POST',
-    headers: {
-      'Content-type' : 'application/json',
-    },
-    body: JSON.stringify({favorite: favorite})
+    return fetch(`${API_URL}/favorites`, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({ favorite: favorite })
     })
-    .then (response => response.json())
-    .then(favorite => {
-      dispatch(getFavorites())
-      
-    })
-    .catch(error=>console.log(error))
+      .then(response => response.json())
+      .then(favorite => {
+        dispatch(getFavorites())
+      })
+      .catch(error => console.log(error))
   }
 }
 
@@ -48,7 +45,6 @@ export const getFavorites = () => {
       .then(favorites => {
         dispatch(setFavorites(favorites))
       })
-      
       .catch(error => console.log(error))
   }
 }
@@ -63,13 +59,9 @@ export const deleteFavorite = (id, history) => {
       },
       body: JSON.stringify({ id: id })
     })
-      
       .then(id => {
-        
         dispatch(deleteFavoriteUpdate(id))
         dispatch(getFavorites())
-        
-        
       })
       .catch(error => console.log(error))
   }

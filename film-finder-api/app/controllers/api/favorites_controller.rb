@@ -9,7 +9,6 @@ class Api::FavoritesController < ApplicationController
   end
 
   def create 
-    
     favorite = Favorite.new(favorite_params)
     if favorite.save 
       render json:favorite
@@ -18,8 +17,6 @@ class Api::FavoritesController < ApplicationController
     end
   end
  
-  
-
   def destroy
     @favorite = Favorite.find_by(id: params[:id])
    if @favorite.present? 
@@ -29,8 +26,7 @@ class Api::FavoritesController < ApplicationController
       render json: {message: "Unable to delete"}, status: 400
     end
   end
-
-  
+ 
   private
 
     def set_favorite
@@ -41,8 +37,7 @@ class Api::FavoritesController < ApplicationController
       params.require(:favorite).permit(:id, :title, :backdrop_path, :moviedb_id, :overview, :popularity, :poster_path, :release_date)
     end  
 
-
-  end
+end
 
 
 
