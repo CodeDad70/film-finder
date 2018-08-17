@@ -37,11 +37,15 @@ render() {
 
 return (
 <div>
-  
-  {renderNowPlaying}
-    <NowPlaying/>
-    <AllFavorites/>
-   <MovieSearch/>
+<div className="welcome-text"><h3>Welcome to the <span className="logo-front">Film</span><span className="logo-back">Finder</span></h3></div><br/>
+
+<div className = "welcome-search"><MovieSearch/></div>
+<NowPlaying/>
+<AllFavorites/>
+{/* <div className="movieposters">  {renderNowPlaying}</div> */}
+    
+   
+   
   
 </div>
 );

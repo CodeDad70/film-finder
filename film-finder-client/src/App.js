@@ -4,17 +4,18 @@ import Welcome from './components/Welcome'
 import MovieDisplay from './components/MovieDisplay'
 import ActorsMoviesDisplay from './components/ActorsMoviesDisplay'
 import NowPlayingDisplay from './components/NowPlayingDisplay'
-
 import FavoritesDisplay from './components/FavoritesDisplay'
 import './stylesheets/App.css';
+
 
 class App extends React.Component {
   render() { 
     return (
-
+  <div className= "background">
+  
    <Router>
-  <div className="card-1">
-    <h1> Welcome to the FilmFinder</h1>
+  <div >
+    
     
     
     <Route exact path="/" component={Welcome}/>
@@ -28,6 +29,7 @@ class App extends React.Component {
   
   </div>
   </Router>
+  </div>
     )
   }
 }

@@ -32,8 +32,8 @@ class ActorCard extends Component {
     let knownFor = this.props.search.known_for.map(movie=> <p>{movie.title}</p> )  
     
     return (
-      <div key={this.props.search.id} id = {this.props.search.id} className = "MovieCard">
-    <div className = "song-card" onClick={this.handleClick} ref = {this.props.search.id}>
+      <div key={this.props.search.id} id = {this.props.search.id} className = "movie-card">
+    <div className = "card" onClick={this.handleClick} ref = {this.props.search.id}>
       
       <h3> {this.props.search.name} </h3>
       <h3>Best known for: </h3>

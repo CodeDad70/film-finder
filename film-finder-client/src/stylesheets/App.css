@@ -1,44 +1,10 @@
-.App-layout {
-  background-color: #515050;
-}
+.background {
+  background-image: url('../images/background_image2.jpg'); 
+  background-repeat: no-repeat;
+  height: 100%;
+  width:100%;
+  padding-bottom:400px;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 30px;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.lyrics {
-  width: 800px;
-}
-
-.songform {
-  width: 100px;
-}
-
-.chords {
-  background: transparent;
-  border: none;
-}
-
-.songtab {
-  width:70%;
-  color: rgb(255, 255, 255);
-  float:right;
-  white-space: pre;
-  display:block;
 }
 
 .main-stage {
@@ -48,64 +14,56 @@
   display:block;
 }
 
-.lyric-field {
-  width:70%;
-  color: rgb(255, 255, 255); 
-  white-space: pre;
+.welcome-text {
+  margin-left: 20px;
+  color:white;
+  float:left;
+  display:block;
 }
 
-.welcome {
-  text-align: center;
-  width:40%;
-  background-color: #d6002e;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.welcome-search {
+  margin: 18% 30% ;
 }
 
-.Sidebar {
-  background-color: #d6002e;
-  float: left;
-  width: 25%;
-  float: left;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  clear:left;
-  color: #750808;
+.logo-front {
+  color:rgb(170, 184, 253);
+  font-size: 2.5em
+}
+.logo-back {
+  color:rgb(112, 135, 253);
+  font-size: 2.5em
 }
 
 
-.Logo { 
-  line-height: 5px;
-  float: left;
-  padding: 10px 0px 15px 10px;
-  background-color: #d6d6d6;
-  width: 25%;
+.searchcontainer {
+  width:60%
 }
 
-.welcome-logo {
-  display: block;
-  background-color: #eee;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
-  width: 300px;
-  padding: 15px;
-  background-color: #d6d6d6;
+.search-text {
+  color: white;
+  margin-right: 2px
 }
 
-.New-song {
-  background-color: #d6d6d6;
-  color: rgb(0, 0, 0);
-  float: left;
-  width: 25%;
-  float: left;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  clear:left;
-  line-height: 8px;
+.searchbox {
+  float:left;
+  display:block;
+  height:30px;
+
+border: 2px solid rgb(159, 175, 255);
+background:  #fffefe;
+}
+
+.dropdown {
+float:right;
+display:block;
+border: 2px solid rgb(159, 175, 255);
+background:  #dbdbdb;
+  display:inline;
+}
+
+.searchbutton {
+  padding: 18% 15% 0% 50%;
+  
 }
 
 .link-style {
@@ -116,7 +74,7 @@
   color:  #000000; 
 }
 
-.song-card {
+.movie-card {
   
   --webkit-box-shadow: 3px 5px 31px 2px rgba(0,0,0,0.75);
   -moz-box-shadow: 3px 5px 31px 2px rgba(0,0,0,0.75);

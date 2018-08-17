@@ -20,9 +20,9 @@ class MovieSearch extends Component {
   
 
   onDropdownSelect = (value) => {
-    console.log('Selected value=', value)
+    
     searchParam = value
-    console.log(searchParam)
+    
   }
 
     handleSearch = (e) => {
@@ -57,31 +57,39 @@ render() {
   const { fireRedirectActor } = this.state
 
 return (
-<div>
-  <h1>Search for a movie</h1>
-  <form onSubmit={this.handleSearch}>
-   <input  required type="text" ref={(input)=>this.getSearch = input} 
+<div className="searchcontainer">
+  
+  <h3 className="search-text">Search for a movie: </h3>
+  <form  onSubmit={this.handleSearch}>
+  
+   <input className="searchbox" required type="text" ref={(input)=>this.getSearch = input} 
     placeholder="Enter a Movie or Actor" />
-   <br /><br />
-
-   <div>
+    
+   
+      <div className="dropdown">
       <ReactSingleDropdown 
+       
       defaultSelected = 'Movie'
       onSelect={this.onDropdownSelect}
       noAnimation
       options={['Movie','Actor']}
-      width='100'/>
-    </div>
+      width='100'
+      height='20'
+      />
 
-    <button>Search</button>
-    
+      
+      </div>
+      
    
+    
+      <div className="searchbutton"><button >Search</button></div>
+    
   </form>
 
   {fireRedirectMovie && <Redirect to={`/movies`} />}
     {fireRedirectActor && <Redirect to={`/actor`} />}
-
-
+    
+  
 </div>
 );
 }

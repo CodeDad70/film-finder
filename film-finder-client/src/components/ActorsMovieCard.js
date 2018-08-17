@@ -17,7 +17,7 @@ class ActorsMovieCard extends Component {
   render() {
     return (
       <div key={this.props.search.id} id = {this.props.search.id} className = "MovieCard">
-      <div className = "song-card" onClick={this.handleClick} ref = {this.props.search.id}>
+      <div className = "movie-card" onClick={this.handleClick} ref = {this.props.search.id}>
         
         <h2>Film: {this.props.search.title} </h2>
         <h3>Character:  {this.props.search.character} </h3>

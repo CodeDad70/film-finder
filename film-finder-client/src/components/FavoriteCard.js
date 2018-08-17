@@ -12,7 +12,7 @@ class FavoriteCard extends Component {
     return (
       <div key={this.props.fav.id} className = "MovieCard">
   
-    <div className = "song-card"  >
+    <div className = "movie-card"  >
     
     <img className="AlbumImage" src = {"http://image.tmdb.org/t/p/w185//" + this.props.fav.poster_path} alt={this.props.fav.name} / >   
       <h3> {this.props.fav.title} </h3>
