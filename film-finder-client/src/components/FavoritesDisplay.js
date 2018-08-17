@@ -18,12 +18,12 @@ class FavoritesDisplay extends Component {
 
   render() {
     let renderFavorites
-
-    console.log("fav display", this.props.favorites)
-    
+   
     
     if(this.props.favorites) {
-      
+
+       
+
       renderFavorites =  this.props.favorites.map(function(fav){ 
         
         return  <div><FavoriteCard  key={fav.id}  fav={fav} /></div>
@@ -35,8 +35,8 @@ class FavoritesDisplay extends Component {
         <div className="main-search">
           <MovieSearch/>
       </div>
-
-        <h2 className="main-headline">Your watchlist: </h2>
+      <h2 className="main-headline">Your Watchlist: </h2>
+       
         {renderFavorites}
 
       </div>

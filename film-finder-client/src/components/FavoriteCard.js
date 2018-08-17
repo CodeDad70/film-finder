@@ -23,7 +23,7 @@ class FavoriteCard extends Component {
 
       <div className="flex-row">
 
-      <h2 className="movie-card.title"> {this.props.fav.title} </h2>
+      <h2 className="movie-card-title"> {this.props.fav.title} </h2>
       </div>
         
         {this.props.fav.overview}
