@@ -5,6 +5,7 @@ import MovieDisplay from './components/MovieDisplay'
 import ActorsMoviesDisplay from './components/ActorsMoviesDisplay'
 import NowPlayingDisplay from './components/NowPlayingDisplay'
 import FavoritesDisplay from './components/FavoritesDisplay'
+import Nav from './components/Nav';
 import './stylesheets/App.css';
 
 
@@ -16,7 +17,7 @@ class App extends React.Component {
    <Router>
   <div >
     
-    
+    <Nav/>
     
     <Route exact path="/" component={Welcome}/>
     

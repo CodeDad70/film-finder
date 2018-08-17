@@ -5,8 +5,8 @@ const NowPlaying = () => {
   
  
   return (
-    <div>
-       <Link to={'/nowplaying'}>See what's playing in theatres</Link>
+    <div className="nav-left">
+       <Link to={'/nowplaying' } className="link-style">Now Playing</Link>
     </div>
   );
 };

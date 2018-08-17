@@ -82,7 +82,7 @@ return (
       
    
     
-      <div className="searchbutton"><button >Search</button></div>
+      <div className="searchbutton"><button className="button" >Search</button></div>
     
   </form>
 

@@ -5,8 +5,8 @@ const AllFavorites = () => {
   
  
   return (
-    <div>
-       <Link to={'/watchlist'}>Your WatchList</Link>
+    <div className ="nav-right">
+       <Link to={'/watchlist'} className="link-style">Your WatchList</Link>
     </div>
   );
 };

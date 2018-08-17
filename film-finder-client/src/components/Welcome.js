@@ -3,8 +3,7 @@ import {connect} from 'react-redux';
 
 import {getNowPlaying} from '../actions/movies';
 import MovieSearch from '../containers/MovieSearch'
-import NowPlaying from './NowPlaying';
-import AllFavorites from './AllFavorites'
+
 
 
 
@@ -37,12 +36,10 @@ render() {
 
 return (
 <div>
-<div className="welcome-text"><h3>Welcome to the <span className="logo-front">Film</span><span className="logo-back">Finder</span></h3></div><br/>
 
 <div className = "welcome-search"><MovieSearch/></div>
-<NowPlaying/>
-<AllFavorites/>
-{/* <div className="movieposters">  {renderNowPlaying}</div> */}
+
+
     
    
    

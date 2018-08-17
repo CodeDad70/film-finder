@@ -7,6 +7,23 @@
 
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:visited {
+  color:white;;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(112, 135, 253);
+}
+
 .main-stage {
   width:70%;
   color: rgb(255, 255, 255);
@@ -17,6 +34,13 @@
 .welcome-text {
   margin-left: 20px;
   color:white;
+  float:left;
+  display:block;
+}
+
+.welcome-text:hover {
+  margin-left: 20px;
+  color:rgb(112, 135, 253);
   float:left;
   display:block;
 }
@@ -34,8 +58,39 @@
   font-size: 2.5em
 }
 
+.logo-front:hover {
+  color:rgb(112, 135, 253);
+  font-size: 2.5em
+}
+.logo-back:hover {
+  color:rgb(170, 184, 253);
+  font-size: 2.5em
+}
+
+.nav {
+  padding-top: 18px;
+  display:block;
+  float:right;
+  margin-right: 20px;
+  width:17%;
+}
+
+.nav-left{
+  float:left;
+  display:block;
+}
+
+.nav-right{
+  float:right;
+  display:block;
+}
 
 .searchcontainer {
+  
+    margin: 0 auto;
+  
+  
+  padding-top:3%;
   width:60%
 }
 
@@ -47,8 +102,8 @@
 .searchbox {
   float:left;
   display:block;
-  height:30px;
-
+  height:28px;
+width: 190px;
 border: 2px solid rgb(159, 175, 255);
 background:  #fffefe;
 }
@@ -56,18 +111,26 @@ background:  #fffefe;
 .dropdown {
 float:right;
 display:block;
-border: 2px solid rgb(159, 175, 255);
+border: 1px solid rgb(159, 175, 255);
 background:  #dbdbdb;
   display:inline;
 }
 
 .searchbutton {
-  padding: 18% 15% 0% 50%;
+  padding: 18% 15% 0% 30%;
   
 }
 
+.button {
+  width: 100px
+}
+
 .link-style {
-  color:  #ffffff; 
+  color:  rgb(170, 184, 253);
+}
+
+.link-style:hover {
+  color:  rgb(112, 135, 253);
 }
 
 .logo-link-style {
