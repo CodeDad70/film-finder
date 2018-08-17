@@ -16,19 +16,29 @@ class ActorsMovieCard extends Component {
 
   render() {
     return (
-      <div key={this.props.search.id} id = {this.props.search.id} className = "MovieCard">
+      
       <div className = "movie-card" onClick={this.handleClick} ref = {this.props.search.id}>
-        
+
+        <div className='flex-body'>
+
+        <div className="flex-column">
+          <img className="PosterImage" src = {"http://image.tmdb.org/t/p/w300//" + this.props.search.poster_path} alt='Sorry - Image Not Available'/>  
+        </div>
+
+        <div className="flex-column">
+
+          <div className="flex-row">
+
+
         <h2>Film: {this.props.search.title} </h2>
+        </div>
         <h3>Character:  {this.props.search.character} </h3>
-        
-        
-        <img className="PosterImage" src = {"http://image.tmdb.org/t/p/w300//" + this.props.search.poster_path} alt='Sorry - Image Not Available'/>  
-        <p> id = {this.props.search.id} </p>
-        
         <Favorite search={this.props.search} />
+       </div> 
+        
         </div>
         </div>
+       
     )
   }
   

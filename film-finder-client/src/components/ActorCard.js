@@ -42,10 +42,11 @@ class ActorCard extends Component {
 
         <div className="flex-column">
         <div className="flex-row">
-          <h3> {this.props.search.name} </h3>
+          <h2> {this.props.search.name} </h2>
           </div>
           <h3>Best known for: </h3>
-          {knownFor}<br />
+          {knownFor}<br /><br/>
+          <a> Click to see all of {this.props.search.name}'s movies</a>
 
           <div/>
         </div>

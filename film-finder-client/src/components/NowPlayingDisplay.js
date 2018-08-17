@@ -32,7 +32,7 @@ class NowPlayingDisplay extends Component {
           <MovieSearch/>
         </div>
 
-        <h1>Here are your movies: </h1>
+        <h2 className="main-headline">Now Playing: </h2>
         {renderNowPlaying}
 
       </div>
