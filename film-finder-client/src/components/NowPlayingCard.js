@@ -18,7 +18,7 @@ class NowPlayingCard extends Component {
 
 
           <div className="flex-column" >
-            <img className="movie-card-image" src={"http://image.tmdb.org/t/p/w185//" + this.props.search.poster_path} alt={this.props.search.name} />
+            <img className="PosterImage" src={"http://image.tmdb.org/t/p/w185//" + this.props.search.poster_path} alt={this.props.search.name} />
           </div>
 
 

@@ -226,3 +226,8 @@ margin: 0 auto 20px;
   color:white;
   margin-left: 252px;
 }
+
+.heart-icon {
+  width: 25px;
+  padding: 5px;
+}

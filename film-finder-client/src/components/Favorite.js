@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {createFavorite} from '../actions/favorites'
 import {getFavorites} from '../actions/favorites'
 import {deleteFavorite} from '../actions/favorites'
+import heartIcon from '../images/heartIcon.png'
 
 
 
@@ -29,17 +30,7 @@ class Favorite extends Component {
     this.props.createFavorite(currentMovieData)
     
 
-    } else if (this.removeFav) {
-      
-      
-
-          this.props.deleteFavorite(this.removeFav)
-         
-        
-          
-        }
- 
-      
+      }       
     }
   
 
@@ -72,7 +63,7 @@ class Favorite extends Component {
       } 
     })
     
-    deleteId>=1 ?  buttonRender = <button onClick={this.handleClick}  value={this.removeFav= deleteId}> Remove from Watchlist </button> :
+    deleteId>=1 ?  buttonRender = <img  src = {heartIcon} className = 'heart-icon' alt='heartIcon' / > :
     buttonRender = <button onClick={this.handleClick}  value={this.addFav = this.props.search}> Add To  Watchlist </button>
     
     //  console.log(buttonSelect)

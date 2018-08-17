@@ -15,7 +15,7 @@ class MovieCard extends Component {
     <div className='flex-body'>
 
     <div className="flex-column" >
-      <img  src = {"http://image.tmdb.org/t/p/w185//" + this.props.search.poster_path} alt={this.props.search.name} / >  
+      <img className="PosterImage" src = {"http://image.tmdb.org/t/p/w185//" + this.props.search.poster_path} alt={this.props.search.name} / >  
     </div>
 
      <div className="flex-column">
