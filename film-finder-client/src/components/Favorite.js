@@ -21,7 +21,9 @@ class Favorite extends Component {
       const currentMovieData = {
         title: this.addFav.title,
         moviedb_id: this.addFav.id,
-        overview:this.addFav.overview
+        overview:this.addFav.overview,
+        backdrop_path: this.addFav.backdrop_path,
+        poster_path: this.addFav.poster_path
       }
     
     this.props.createFavorite(currentMovieData)
@@ -88,7 +90,8 @@ class Favorite extends Component {
     return ({
       favorites: state.favoritesReducer,
       createFavorite: state.createFavorite,
-      deleteFavorite: state.deleteFavorite
+      deleteFavorite: state.deleteFavorite,
+      getFavorites: state.getFavorites
     })
   }
   
