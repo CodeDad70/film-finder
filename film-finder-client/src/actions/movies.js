@@ -1,5 +1,4 @@
-const REACT_APP_API_KEY = '507b27c76d1cd9905d36d167744d3eca'
-
+const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
 //action creators
 
 const setMovie = movies => {
