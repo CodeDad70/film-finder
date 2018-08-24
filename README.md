@@ -1,8 +1,16 @@
 # README
 
-Welcome to the FilmFinder ! 
+Welcome to the FilmFinder 
 
-This app talks to the The Movie Database API to show you the latest releases, help you find your favorite movies and see all the movies starring your favorite actor.
+See this app running online at Heroku :
+
+https://agile-river-92406.herokuapp.com  
+
+** A quick note on Heroku **
+The reason Heroku is free is that if an app is idle it puts the server to sleep in memory. This can create a bit of a slow down on load. 
+Additionally the watch list this app is accessing is a second Heroku app.. a rails API. There may be a bit of lag on initial load as it wakes the rails api up. Once the servers are awake things will run nice and smoothly. Thanks for your patience.
+
+
 
 ------Starting Up --------
 
