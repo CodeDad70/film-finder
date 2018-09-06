@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180816014926) do
     t.integer "moviedb_id"
     t.text "overview"
     t.integer "popularity"
-    t.string "poster_path"
+    t.string "post_path"
     t.string "release_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

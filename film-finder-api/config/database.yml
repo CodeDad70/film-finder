@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: film-finder-api_production
-  username: film-finder-api
+  username: codedad
   password: <%= ENV['FILM-FINDER-API_DATABASE_PASSWORD'] %>
